@@ -1,16 +1,97 @@
 ---
+import '../styles/global.css';
+import Nav from '../components/svelte/Nav.svelte';
+import ScheduleBtn from '../components/svelte/ScheduleBtn.svelte';
+import Image from 'astro/components/Image.astro';
+import Matthew from '../assets/matthew-w.webp';
+import Form from '../components/svelte/Form.svelte';
+import WhatIBring from '../components/svelte/WhatIBring.svelte';
+import Projects from '../components/svelte/Projects.svelte';
+import AboutMe from '../components/svelte/AboutMe.svelte';
 
+const warmBg = '#fee9e7';
+const darkBg = '#0c3236';
+const blueContainerBg = '#02616c';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} >
+    <title> Matthew Zhang </title>
+  </head>
+
+  <body>
+    <!-- TODO: position this Nav inside top div without breaking flexbox -->
+    <Nav client:load />
+    <div id="#top" class="home">
+
+      <Image loading={'eager'} class={ "author" } src={ Matthew } alt={ "Matthew" } />
+      <div class="home-info">
+        <span class="big-text"> Hi, I'm Matthew! I help others build full stack applications and AI-powered products. </span>
+        <span class="small-text"> 
+          I have 'x' years of experience creating websites, mobile apps, and AI tools for startups and individuals alike. 
+          Got an idea you want brought into reality? Hit the button below and let's chat!
+        </span>
+        <ScheduleBtn client:load isHomePage={ true } isMobile={ false }/>
+      </div>
+    </div>
+    <WhatIBring client:visible/>
+    <Projects client:visible />
+    <AboutMe client:visible />
+  </body>
+
+  <style define:vars={{ warmBg, darkBg, blueContainerBg }}>
+    body {
+      width: 100vw;
+      height: 100vh;
+      padding-block: 10px;
+    }
+    .home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--warmBg), #cfb4b4, #b4a4a4);
+    }
+    .home :first-child {
+      margin-inline-end: 25px;
+    }
+    .projects {
+      background: linear-gradient(to bottom, var(--warmBg), #cfb4b4, #b4a4a4);
+    }
+    .what-i-bring, .about-me {
+      background: linear-gradient(to bottom, var(--darkBg));
+    }
+
+    .author {
+      width: 25%;
+      height: auto;
+      border-radius: 50px;
+    }
+
+    .home-info {
+      width: 50ch;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: sans-serif;
+    }
+
+    .home-info :nth-child(n) {
+      margin-block-end: 20px;
+    }
+
+    .big-text {
+      font-weight: bold;
+      font-size: 32px;
+    }
+    .small-text {
+      font-size: 20px;
+    }
+
+  </style>
 </html>
