@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 import Nav from '../components/svelte/Nav.svelte';
 import ScheduleBtn from '../components/svelte/ScheduleBtn.svelte';
 import Image from 'astro/components/Image.astro';
@@ -14,21 +15,14 @@ const darkBg = '#0c3236';
 const blueContainerBg = '#02616c';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} >
-    <title> Matthew Zhang </title>
-  </head>
 
-  <body>
-    <!-- TODO: position this Nav inside top div without breaking flexbox -->
+
+<Layout>
+  <div id="#top" class="home">
     <Nav client:load />
-    <div id="#top" class="home">
-
+    <div class="home-content">
       <Image loading={'eager'} class={ "author" } src={ Matthew } alt={ "Matthew" } />
-      <div class="home-info">
+      <div class="home-text">
         <span class="big-text"> Hi, I'm Matthew! I help others build full stack applications and AI-powered products. </span>
         <span class="small-text"> 
           I have 'x' years of experience creating websites, mobile apps, and AI tools for startups and individuals alike. 
@@ -37,21 +31,25 @@ const blueContainerBg = '#02616c';
         <ScheduleBtn client:load isHomePage={ true } isMobile={ false }/>
       </div>
     </div>
-    <WhatIBring client:visible/>
-    <Projects client:visible />
-    <AboutMe client:visible />
-  </body>
+  </div>
+  <WhatIBring client:visible/>
+  <Projects client:visible />
+  <AboutMe client:visible />
+  <Form />
+  <Form />
 
   <style define:vars={{ warmBg, darkBg, blueContainerBg }}>
     body {
       width: 100vw;
       height: 100vh;
       padding-block: 10px;
+
     }
     .home {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       width: 100%;
       height: 100%;
       background: linear-gradient(to bottom, var(--warmBg), #cfb4b4, #b4a4a4);
@@ -72,8 +70,16 @@ const blueContainerBg = '#02616c';
       border-radius: 50px;
     }
 
-    .home-info {
-      width: 50ch;
+    .home-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-block-start: 10px;
+    }
+    .home-text {
+      width: 50%;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -82,7 +88,7 @@ const blueContainerBg = '#02616c';
     }
 
     .home-info :nth-child(n) {
-      margin-block-end: 20px;
+      margin-block-end: 25px;
     }
 
     .big-text {
@@ -94,4 +100,4 @@ const blueContainerBg = '#02616c';
     }
 
   </style>
-</html>
+</Layout>

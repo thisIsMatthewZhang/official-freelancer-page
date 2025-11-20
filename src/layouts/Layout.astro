@@ -1,0 +1,31 @@
+---
+
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} >
+    <title> Matthew Zhang </title>
+  </head>
+  <body class:list={["fade-in"]}>
+    <slot />
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+    .fade-in {
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+
+    .fade-in.loaded {
+        opacity: 1;
+    }
+</style>

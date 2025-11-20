@@ -94,8 +94,13 @@
     /* CSS for desktop screens */
     @media only screen and (min-width: 767px) {
         nav {
+            width: auto;
+            height: auto;
+            /* background-color: red; */
             position: sticky;
             top: 0;
+            z-index: 100;
+            /* margin-top: 10px; */
         }
         nav.bright-bg {
             color: black;
