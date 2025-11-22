@@ -1,5 +1,5 @@
 
 
-<div id="#about-me" class="about-me">
+<div id="#about-me" class="dark-gradient">
 
 </div>

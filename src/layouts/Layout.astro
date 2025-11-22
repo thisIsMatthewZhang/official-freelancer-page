@@ -1,5 +1,7 @@
 ---
-
+const warmBg = '#ffa5a5';
+const darkBg = '#0c3236';
+const blueContainerBg = '#02616c';
 ---
 
 <html>
@@ -9,17 +11,18 @@
     <meta name="generator" content={Astro.generator} >
     <title> Matthew Zhang </title>
   </head>
-  <body class:list={["fade-in"]}>
+  <body>
     <slot />
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            document.body.classList.add('loaded');
-        });
-    </script>
   </body>
 </html>
 
-<style is:global>
+<style is:global define:vars={{warmBg, darkBg, blueContainerBg}}>
+    body {
+      width: 100vw;
+      height: 100vh;
+      padding-block: 10px;
+
+    }
     .fade-in {
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
@@ -27,5 +30,13 @@
 
     .fade-in.loaded {
         opacity: 1;
+    }
+
+    .warm-gradient {
+      background: linear-gradient(to bottom, var(--warmBg), #ffb9b9, #ffdada);
+    }
+
+    .dark-gradient {
+      background: linear-gradient(to bottom, var(--darkBg));
     }
 </style>

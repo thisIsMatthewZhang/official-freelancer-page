@@ -33,7 +33,7 @@
     
 
 </script>
-<nav class={ screenBgColor }>
+<nav class={ `${screenBgColor} warm-gradient` }>
     <button title="nav icon for mobile" onclick={handleMobileMenuClick} class={ `mobile-icon${showMobileMenu ? ' active' : ''}` }>
         <div class="nav-icon-line"></div>
         <div class="nav-icon-line"></div>
@@ -73,6 +73,8 @@
     .mobile-icon {
         display: flex;
         flex-direction: column;
+        justify-self: end;
+        align-self: end;
         cursor: pointer;
     }
     .mobile-icon.active {
@@ -96,11 +98,10 @@
         nav {
             width: auto;
             height: auto;
-            /* background-color: red; */
             position: sticky;
             top: 0;
             z-index: 100;
-            /* margin-top: 10px; */
+            padding-block: 5px;
         }
         nav.bright-bg {
             color: black;

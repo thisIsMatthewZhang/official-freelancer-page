@@ -21,7 +21,7 @@
 
 <style>
     :global(.home-btn) {
-        width: 30%;
+        width: max-content;
         border: 2px solid black;
         border-radius: 50px;
         color: black;
