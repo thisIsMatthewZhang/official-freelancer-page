@@ -66,7 +66,6 @@
 
   img {
     border-radius: 50px;
-
   }
 
   .hero-right {
@@ -114,8 +113,8 @@
   /* Responsive: mobile-first adjustments */
   @media (max-width: 1024px) {
     .hero-inner { grid-template-columns: 1fr; gap: 20px; text-align: center; }
-    .hero-left { order: 0; }
-    .hero-right { order: 1; }
+    .hero-left { display: none; }
+    .hero-right { order: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
     .hero-title { font-size: 32px; }
   }
 
@@ -125,7 +124,7 @@
       min-height: calc(100vh - 72px);
     }
 
-    /* per your request: hide hero image on mobile */
+
     .hero-left { display: none; }
 
     .hero-inner { grid-template-columns: 1fr; text-align: left; }
