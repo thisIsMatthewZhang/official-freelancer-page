@@ -6,7 +6,7 @@
     let openModal = $state(false);
 </script>
 
-<section class="hero" aria-labelledby="hero-heading">
+<section id="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="hero-left">
         <img src='/src/assets/matthew-w.webp' alt="Matthew Zhang portrait">  
@@ -36,9 +36,10 @@
     --warmBg: #ffa5a5;
     --cta-strong: #ff6b6b; /* pairs with warm gradient */
     --content-max: 1100px;
+    --darkBg: #0C3236;
   }
 
-  .hero {
+  #hero {
     min-height: calc(100vh - 72px);
     display: flex;
     align-items: center;
@@ -74,7 +75,7 @@
 
   .hero-title {
     font-family: "Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    font-size: 36px;
+    font-size: 44px;
     line-height: 1.05;
     font-weight: 900;
     margin: 0 0 12px 0;
@@ -84,7 +85,7 @@
 
   .hero-sub {
     font-family: "Libre Franklin", system-ui, sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     margin: 0 0 18px 0;
     color: #2d2d2d;
     max-width: 52ch;
@@ -119,7 +120,7 @@
   }
 
   @media (max-width: 767px) {
-    .hero {
+    #hero {
       padding: 28px 18px;
       min-height: calc(100vh - 72px);
     }

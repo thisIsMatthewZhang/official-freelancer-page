@@ -33,9 +33,9 @@
 
     <!-- Desktop nav -->
     <ul class="nav-items">
-      <li><button class="nav-link" type="button">What I Bring</button></li>
-      <li><button class="nav-link" type="button">Projects</button></li>
-      <li><button class="nav-link" type="button">About Me</button></li>
+      <li> <a href="#what-i-bring"> <button class="nav-link" type="button"> What I Bring </button> </a> </li>
+      <li> <a href="#projects"> <button class="nav-link" type="button"> Projects </button> </a> </li>
+      <li> <a href="#about-me"> <button class="nav-link" type="button"> About Me </button> </a> </li>
     </ul>
 
     <!-- Transparent CTA -->
@@ -66,9 +66,9 @@
       </div>
 
       <ul class="overlay-nav">
-        <li><button class="overlay-link" onclick={close}>What I Bring</button></li>
-        <li><button class="overlay-link" onclick={close}>Projects</button></li>
-        <li><button class="overlay-link" onclick={close}>About Me</button></li>
+        <li> <a href="#what-i-bring"> <button class="overlay-link" onclick={close}> What I Bring </button> </a> </li>
+        <li> <a href="#projects"> <button class="overlay-link" onclick={close}> Projects </button> </a> </li>
+        <li> <a href="#about-me"> <button class="overlay-link" onclick={close}> About Me </button> </a> </li>
       </ul>
 
       <div class="overlay-cta">
