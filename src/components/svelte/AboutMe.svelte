@@ -3,10 +3,8 @@
 </script>
 
 <section id="about-me">
-    <div class="text-container"> 
-        <h1>
-            About Me
-        </h1>
+    <div> 
+        <h1> About Me </h1>
         <p> My name is Matthew Zhang </p>
         <p>
             I began my independent practice as a way to help others bring their vision into reality. My enthusiasm
@@ -26,7 +24,7 @@
     }
     h1 {
         font-family: "Golos Text", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-        font-size: 44px;
+        font-size: 50px;
         line-height: 2.05;
         font-weight: 600;
         margin: 0 0 32px 0;
@@ -49,6 +47,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    @media only screen and (max-width: 767px) {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
 
 </style>

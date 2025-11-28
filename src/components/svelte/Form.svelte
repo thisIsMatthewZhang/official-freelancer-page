@@ -20,13 +20,13 @@
 
 <form id="request-form" onsubmit={handleFormSubmit}>
     <Label class="text-start ml-1" for="first-name"> First Name </Label>
-    <Input id="first-name" name="first-name" size="lg"  placeholder="First Name" required/>
+    <Input class="even:mb-4" id="first-name" name="first-name" size="lg"  placeholder="First Name" required/>
     <Label class="text-start ml-1" for="last-name"> Last Name </Label>
-    <Input id="last-name" name="last-name" size="lg" placeholder="Last Name" required/>
+    <Input class="even:mb-4" id="last-name" name="last-name" size="lg" placeholder="Last Name" required/>
     <Label class="text-start ml-1" for="email"> Email </Label>
-    <Input type="email" id="email" name="email" size="lg" placeholder="Email" required/>
+    <Input class="even:mb-4" type="email" id="email" name="email" size="lg" placeholder="Email" required/>
     <Label class="text-start ml-1" for="message"> Message </Label>
-    <Textarea id="message" name="message" placeholder="Please describe the project you have in mind" rows={10} cols={95}></Textarea>
+    <Textarea class="w-full h-[100px] even:mb-4" id="message" name="message" placeholder="Please describe the project you have in mind"></Textarea>
     <Button type="submit" class="text-black cursor-pointer bg-[#ff6b6b]"> Submit </Button>
 </form>
 

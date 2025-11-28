@@ -21,10 +21,8 @@
 <nav class="nav">
   <div class="nav-inner">
     <div class="brand">
-      <!-- Avatar placeholder: replace with <img> when ready -->
       <div class="avatar" aria-hidden="true">
-        <!-- PLACEHOLDER: drop your avatar image here later -->
-        <span class="avatar-text"> Matthew Zhang </span>
+        <a href="#hero" class="avatar-text"> Matthew Zhang </a>
       </div>
 
       <!-- thin separator line between avatar and items on desktop -->
@@ -166,7 +164,7 @@
 
   .cta-transparent {
     background: transparent;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 4px solid rgba(0,0,0,0.06);
     padding: 8px 14px;
     border-radius: 999px;
     font-weight: 700;

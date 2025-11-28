@@ -9,7 +9,7 @@
 <section id="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="hero-left">
-        <img src='/src/assets/matthew-w.webp' alt="Matthew Zhang portrait">  
+        <img src='/matthew-w.webp' alt="Matthew Zhang portrait">  
     </div>
 
     <div class="hero-right">
@@ -40,7 +40,7 @@
   }
 
   #hero {
-    min-height: calc(100vh - 72px);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,13 +94,13 @@
   .hero-cta {
     font-family: "Golos Text", sans-serif;
     font-weight: 800;
-    padding: 12px 20px;
+    padding: 20px 30px;
     border-radius: 999px;
     border: none;
     cursor: pointer;
     background: var(--cta-strong);
     color: white;
-    font-size: 16px;
+    font-size: 24px;
     transition: transform .14s ease, box-shadow .14s ease;
   }
   .hero-cta:active { transform: translateY(1px); }
