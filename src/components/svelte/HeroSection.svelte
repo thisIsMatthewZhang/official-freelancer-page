@@ -9,7 +9,7 @@
 <section id="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
     <div class="hero-left">
-        <img src='official-freelancer-page/matthew-w.webp' alt="Matthew Zhang portrait">  
+        <img src='/src/assets/matthew-w.webp' alt="Matthew Zhang portrait">  
     </div>
 
     <div class="hero-right">
