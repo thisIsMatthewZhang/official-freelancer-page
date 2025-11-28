@@ -3,17 +3,20 @@
     import type { EventHandler } from 'svelte/elements';
     import emailjs from '@emailjs/browser';
 
-    function handleFormSubmit() {
-        try {
-            emailjs.init({ publicKey: "x8aGnSPqceYdIMz7B" });
-            const form = document.getElementById('request-form') as HTMLFormElement;
-            emailjs.sendForm("service_iqxcs52", "template_joq93w9", form)
-            .then(() => alert("sent!"))
-            .catch((reason) => alert(reason));
-        }
-        catch (e) {
-            alert("Error occurred when attempting to send form. Please try again.")
-        }
+    function handleFormSubmit(event: Event) {
+        emailjs.init({ publicKey: "x8aGnSPqceYdIMz7B" });
+        event.preventDefault();
+        // const form = document.getElementById('request-form') as HTMLFormElement;
+        const form = event.target as HTMLFormElement;
+        emailjs.sendForm("service_iqxcs52", "template_joq93w9", form)
+        .then(() => { 
+            alert("Thank you for submitting an inquiry - you should receive a confirmation email soon.") 
+            form.reset();
+        })
+        .catch((reason) => { 
+            console.error(reason);
+            alert("Failed to submit form - please try again.") 
+        });
     }
 </script>
 
