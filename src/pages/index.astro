@@ -4,7 +4,7 @@ import NavBar from '../components/svelte/NavBar.svelte';
 import HeroSection from '../components/svelte/HeroSection.svelte';
 import ProjectSection from '../components/svelte/ProjectSection.svelte';
 import AboutMe from '../components/svelte/AboutMe.svelte';
-import Image from 'astro/components/Image.astro';
+import WhatIBring from '../components/svelte/WhatIBringSection.svelte'
 ---
 
 <html lang="en">
@@ -12,10 +12,11 @@ import Image from 'astro/components/Image.astro';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Matthew Zhang - Freelance Developer </title>
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/icon" href="/favicon.ico">
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="/favicon_io/site.webmanifest">
+  <link rel="manifest" href="/favicon_io/site.webmanifest"> -->
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/global.css">
 </head>
@@ -24,9 +25,9 @@ import Image from 'astro/components/Image.astro';
   
   <main>
     <HeroSection client:load />
-    <!-- <ProjectSection client:visible /> -->
+    <WhatIBring client:visible />
+    <ProjectSection client:visible />
     <AboutMe client:visible />
-    <section id="about-me" class="site-section"> <!-- content later --> </section>
   </main>
 </body>
 </html>

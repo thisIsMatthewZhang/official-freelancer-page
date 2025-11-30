@@ -109,6 +109,7 @@
     transform: translateY(-3px);
     box-shadow: 0 18px 36px rgba(0,0,0,0.12);
     outline: 3px solid rgba(255,255,255,0.18);
+    transition: all;
   }
 
   /* Responsive: mobile-first adjustments */

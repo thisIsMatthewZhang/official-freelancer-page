@@ -3,12 +3,12 @@
     import type { EventHandler } from 'svelte/elements';
     import emailjs from '@emailjs/browser';
 
-    function handleFormSubmit(event: Event) {
+    async function handleFormSubmit(event: Event) {
         emailjs.init({ publicKey: "x8aGnSPqceYdIMz7B" });
         event.preventDefault();
         // const form = document.getElementById('request-form') as HTMLFormElement;
         const form = event.target as HTMLFormElement;
-        emailjs.sendForm("service_iqxcs52", "template_joq93w9", form)
+        await emailjs.sendForm("service_iqxcs52", "template_joq93w9", form)
         .then(() => { 
             alert("Thank you for submitting an inquiry - you should receive a confirmation email soon.") 
             form.reset();
