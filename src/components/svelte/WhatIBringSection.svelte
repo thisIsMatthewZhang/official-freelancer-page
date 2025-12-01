@@ -21,7 +21,7 @@
     <div class="text-container">
         <h1> What Will I Bring </h1>
         <p>
-            I've worked alongside clients on a variety of end-to-end applications. 
+            I have worked alongside clients on a variety of end-to-end applications. 
             Feel free to reach out if you have inquiries for any of the following: 
         </p>
     </div>

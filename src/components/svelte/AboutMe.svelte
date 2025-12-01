@@ -5,7 +5,7 @@
 <section id="about-me">
     <div> 
         <h1> About Me </h1>
-        <p> My name is Matthew Zhang </p>
+        <p> My name is Matthew Zhang. </p>
         <p>
             I began my independent practice as a way to help others bring their vision into reality. My enthusiasm
             for building effective products coupled with my ability to work alongside a team means you can be assured 

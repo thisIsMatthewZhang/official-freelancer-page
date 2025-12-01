@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { Modal, Label, Input, Textarea, Button } from 'flowbite-svelte';
-    import type { EventHandler } from 'svelte/elements';
+    import { Label, Input, Textarea, Button } from 'flowbite-svelte';
     import emailjs from '@emailjs/browser';
 
     async function handleFormSubmit(event: Event) {
@@ -19,7 +18,6 @@
         });
     }
 </script>
-
 
 <form id="request-form" onsubmit={handleFormSubmit}>
     <Label class="text-start ml-1" for="first-name"> First Name </Label>
