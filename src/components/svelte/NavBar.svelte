@@ -130,8 +130,8 @@
   }
 
   .sep {
-    width: 1px;
-    height: 28px;
+    width: 2px;
+    height: 32px;
     background: rgba(0,0,0,0.08);
     margin-left: 20px;
   }
@@ -151,7 +151,7 @@
     border: 0;
     padding: 8px 6px;
     font-family: "Libre Franklin", system-ui, sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
   }
   .nav-link:hover,
