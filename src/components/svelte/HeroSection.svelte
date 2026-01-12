@@ -2,12 +2,18 @@
     import '../../styles/global.css';
     import { Modal } from 'flowbite-svelte';
     import Form from './Form.svelte';
+    import { onMount } from 'svelte';
 
     let openModal = $state(false);
+
+    onMount(() => {
+      (document.getElementById("hero-inner") as HTMLDivElement).style.opacity = "1";
+      (document.getElementById("hero-inner") as HTMLDivElement).style.transition = "all 1s"
+    });
 </script>
 
 <section id="hero" aria-labelledby="hero-heading">
-  <div class="hero-inner">
+  <div id="hero-inner">
     <div class="hero-left">
         <img src='/matthew-w.webp' alt="Matthew Zhang portrait">  
     </div>
@@ -49,13 +55,14 @@
     padding: 36px 20px;
   }
 
-  .hero-inner {
+  #hero-inner {
     max-width: var(--content-max);
     width: 100%;
     display: grid;
     grid-template-columns: 420px 1fr;
     gap: 32px;
     align-items: center;
+    opacity: 0;
   }
 
   /* Left image placeholder */
@@ -114,7 +121,7 @@
 
   /* Responsive: mobile-first adjustments */
   @media (max-width: 1024px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 20px; text-align: center; }
+    #hero-inner { grid-template-columns: 1fr; gap: 20px; text-align: center; }
     .hero-left { display: none; }
     .hero-right { order: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
     .hero-title { font-size: 32px; }
@@ -129,7 +136,7 @@
 
     .hero-left { display: none; }
 
-    .hero-inner { grid-template-columns: 1fr; text-align: left; }
+    #hero-inner { grid-template-columns: 1fr; text-align: left; }
     .hero-title { font-size: 28px; }
     .hero-sub { font-size: 15px; }
     .hero-cta { width: auto; }
